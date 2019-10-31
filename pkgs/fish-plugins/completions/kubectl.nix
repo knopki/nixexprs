@@ -3,7 +3,7 @@ with lib;
 let
   mySrc = sources.fish-kubectl-completions;
 
-  name = "fish-kubectl-completions";
+  name = "kubectl";
   version = mySrc.version;
 
   src = runCommand "fish-completion-${name}-${version}-src" {
