@@ -64,6 +64,19 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "version": "v1.0.10"
     },
+    "morph": {
+        "branch": "master",
+        "description": "NixOS deployment tool",
+        "homepage": null,
+        "owner": "delroth",
+        "repo": "morph",
+        "rev": "949c3eaa50805921c77381a4e248c1f2db1be449",
+        "sha256": "0rcls8vv4a0hld0ryw7z6qgvpqz16rhf5dzagcsrib0s85b800gf",
+        "type": "tarball",
+        "url": "https://github.com/delroth/morph/archive/949c3eaa50805921c77381a4e248c1f2db1be449.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "version": "v1.3.1"
+    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",
