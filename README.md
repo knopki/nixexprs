@@ -12,6 +12,11 @@ TODO: write how to setup
 
 - nix
 
+### Overlays
+
+- morph
+- niv
+
 ### Packages
 
 - Fish Shell plugins
