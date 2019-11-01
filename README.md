@@ -16,6 +16,7 @@ TODO: write how to setup
 
 - morph
 - niv
+- nixpkgs-fmt
 
 ### Packages
 
