@@ -103,6 +103,29 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "version": "0.6.1"
     },
+    "telepresence": {
+        "branch": "0.103",
+        "description": "Local development against a remote Kubernetes or OpenShift cluster",
+        "homepage": "https://www.telepresence.io",
+        "owner": "datawire",
+        "repo": "telepresence",
+        "rev": "3256869e2c567e96bf9a19a0b9e44ab82e8453df",
+        "sha256": "1bq0j60h75r9pgs4pfkjlfd4dc7cdr3lai4r94bncr103w633wfp",
+        "type": "tarball",
+        "url": "https://github.com/datawire/telepresence/archive/3256869e2c567e96bf9a19a0b9e44ab82e8453df.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "version": "0.103"
+    },
+    "telepresence-sshuttle": {
+        "branch": "master",
+        "description": "Transparent proxy server that works as a poor man's VPN.  Forwards over ssh.  Doesn't require admin.  Works with Linux and MacOS.  Supports DNS tunneling.",
+        "owner": "datawire",
+        "repo": "sshuttle",
+        "rev": "32226ff14d98d58ccad2a699e10cdfa5d86d6269",
+        "sha256": "1q20lnljndwcpgqv2qrf1k0lbvxppxf98a4g5r9zd566znhcdhx3",
+        "type": "git",
+        "url": "https://github.com/datawire/sshuttle.git"
+    },
     "vim-bbye": {
         "branch": "master",
         "description": "Delete buffers and close files in Vim without closing your windows or messing up your layout. Like Bclose.vim, but rewritten and well maintained.",
