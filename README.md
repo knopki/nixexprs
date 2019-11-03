@@ -30,6 +30,7 @@ TODO: write how to setup
     - kubectl
   - pure theme
 - LS_COLORS
+- neovim-gtk
 - nix-direnv
 - kube-score
 - Vim plugins

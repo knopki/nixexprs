@@ -77,6 +77,20 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "version": "v1.3.1"
     },
+    "neovim-gtk": {
+        "branch": "master",
+        "cargoSha256": "0js581whb6bg65bby2zyssxxrxjcgk925mgv1ds5djdj3bin42ig",
+        "description": "gtk ui for neovim",
+        "homepage": "https://github.com/daa84/neovim-gtk",
+        "owner": "daa84",
+        "repo": "neovim-gtk",
+        "rev": "6a7804c6e797142724548b09109cf2883cd6f08c",
+        "sha256": "0idn0j41h3bvyhcq2k0ywwnbr9rg9ci0knphbf7h7p5fd4zrfb30",
+        "type": "tarball",
+        "url": "https://github.com/daa84/neovim-gtk/archive/6a7804c6e797142724548b09109cf2883cd6f08c.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "version": "0.2.0"
+    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",
