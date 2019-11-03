@@ -116,6 +116,19 @@
         "url": "https://github.com/nix-community/nix-direnv/archive/f9889758694bdfe11251ac475d78a93804dbd93c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "nixfromnpm": {
+        "branch": "master",
+        "description": "Convert NPM packages into nix expressions",
+        "homepage": "",
+        "owner": "adnelson",
+        "repo": "nixfromnpm",
+        "rev": "4ab773cdead920d2312e864857fabaf5f739a80e",
+        "sha256": "108qrfmv31xm22a1swrxzl5p0yfzzxf5hfhk9ih0ca07cyr8s2aw",
+        "type": "tarball",
+        "url": "https://github.com/adnelson/nixfromnpm/archive/4ab773cdead920d2312e864857fabaf5f739a80e.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "version": "0.13.0"
+    },
     "nixpkgs-fmt": {
         "branch": "v0.6.0",
         "description": "Nix code formatter for nixpkgs [maintainer=@zimbatm]",

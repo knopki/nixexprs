@@ -5,6 +5,7 @@
   morph = import ./morph.nix;
   neovim-gtk = import ./neovim-gtk.nix;
   niv = import ./niv.nix;
+  nixfromnpm = import ./nixfromnpm.nix;
   nixpkgs-fmt = import ./nixpkgs-fmt.nix;
   nix-direnv = import ./nix-direnv.nix;
   pulumi = import ./pulumi.nix;
