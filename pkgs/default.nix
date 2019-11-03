@@ -6,6 +6,7 @@ lib.makeScope newScope (
     rec {
       fishPlugins = recurseIntoAttrs (callPackages ./fish-plugins {});
       lsColors = callPackages ./ls-colors.nix {};
+      neovim-gtk = callPackages ./neovim-gtk {};
       kube-score = callPackages ./kube-score {};
       kustomize1 = callPackages ./kustomize1 {};
       nix-direnv = callPackages ./nix-direnv.nix {};
