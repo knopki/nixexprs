@@ -8,7 +8,8 @@ lib.makeScope newScope (
       lsColors = callPackages ./ls-colors.nix {};
       kube-score = callPackages ./kube-score {};
       kustomize1 = callPackages ./kustomize1 {};
-      vimPlugins = recurseIntoAttrs (callPackages ./vim-plugins.nix {});
+      nix-direnv = callPackages ./nix-direnv.nix {};
+      vimPlugins = recurseIntoAttrs (callPackages ./vimPlugins.nix {});
       winbox-bin = callPackages ./winbox {};
       winbox = winbox-bin;
     }

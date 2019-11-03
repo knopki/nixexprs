@@ -17,8 +17,11 @@ TODO: write how to setup
 - morph
 - niv
 - nixpkgs-fmt
+- nix-direnv
 - pulumi (with some resources)
 - telepresence
+- waybar
+- + overlays for all packages
 
 ### Packages
 
@@ -26,6 +29,8 @@ TODO: write how to setup
   - completions
     - kubectl
   - pure theme
+- LS_COLORS
+- nix-direnv
 - kube-score
 - Vim plugins
   - vim-bbye
