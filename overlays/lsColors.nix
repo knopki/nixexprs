@@ -1,3 +1,3 @@
 self: super: {
-  lsColors = super.nur.repos.knopki.lsColors;
+  lsColors = (super.callPackage ../pkgs {}).lsColors;
 }

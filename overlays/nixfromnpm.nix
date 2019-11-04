@@ -1,3 +1,3 @@
 self: super: {
-  nixfromnpm = super.nur.repos.knopki.nixfromnpm;
+  nixfromnpm = (super.callPackage ../pkgs {}).nixfromnpm;
 }

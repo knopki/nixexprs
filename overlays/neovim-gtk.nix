@@ -1,3 +1,3 @@
 self: super: {
-  neovim-gtk = super.nur.repos.knopki.neovim-gtk;
+  neovim-gtk = (super.callPackage ../pkgs {}).neovim-gtk;
 }
