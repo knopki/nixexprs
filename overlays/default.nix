@@ -9,6 +9,7 @@ let
     nixfromnpm = import ./nixfromnpm.nix;
     nixpkgs-fmt = import ./nixpkgs-fmt.nix;
     nix-direnv = import ./nix-direnv.nix;
+    nodePackages = import ./nodePackages.nix;
     pulumi = import ./pulumi.nix;
     telepresence = import ./telepresence.nix;
     vimPlugins = import ./vimPlugins.nix;

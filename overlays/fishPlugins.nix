@@ -1,3 +1,3 @@
 self: super: {
-  fishPlugins = super.nur.repos.knopki.fishPlugins;
+  fishPlugins = (super.callPackage ../pkgs {}).fishPlugins;
 }

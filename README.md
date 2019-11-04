@@ -34,6 +34,8 @@ TODO: write how to setup
 - nixfromnpm
 - nix-direnv
 - kube-score
+- NodeJS packages
+  - yarn-deduplicate
 - Vim plugins
   - vim-bbye
   - vim-sideways

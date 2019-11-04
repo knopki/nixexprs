@@ -9,6 +9,7 @@ repos:
       - id: check-yaml
       - id: detect-private-key
       - id: end-of-file-fixer
+        exclude: pkgs/nodeLib
       - id: trailing-whitespace
 
   - repo: local
@@ -24,5 +25,6 @@ repos:
        exclude: >
          (?x)^(
              nix/sources.nix|
-             test_data/.*
+             test_data/.*|
+             pkgs/nodeLib/.*
          )$

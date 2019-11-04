@@ -1,7 +1,13 @@
-{ pkgs, lib, newScope, recurseIntoAttrs, sources }:
+{ pkgs ? import <nixpkgs> {}, lib, newScope, recurseIntoAttrs, sources ? import ../nix/sources.nix, nodejs ? pkgs.nodejs }:
 lib.makeScope newScope (
   self: with self; let
     callPackages = lib.callPackagesWith (pkgs // self // { inherit sources; });
+    mkNodeLib = import ./nodeLib {
+      self = mkNodeLib;
+    };
+    nodeLib = mkNodeLib {
+      inherit pkgs nodejs;
+    };
   in
     rec {
       fishPlugins = recurseIntoAttrs (callPackages ./fish-plugins {});
@@ -14,5 +20,7 @@ lib.makeScope newScope (
       vimPlugins = recurseIntoAttrs (callPackages ./vimPlugins.nix {});
       winbox-bin = callPackages ./winbox {};
       winbox = winbox-bin;
+    } // nodeLib.generatePackages {
+      nodePackagesPath = ./nodePackages;
     }
 )

@@ -1,3 +1,3 @@
 self: super: {
-  nix-direnv = super.nur.repos.knopki.nix-direnv;
+  nix-direnv = (super.callPackage ../pkgs {}).nix-direnv;
 }
