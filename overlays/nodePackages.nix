@@ -1,3 +1,3 @@
 self: super: {
-  nodePackages = (super.callPackage ../pkgs {}).nodePackages;
+  nodePackages = super.nodePackages // (super.callPackage ../pkgs {}).nodePackages;
 }
