@@ -31,6 +31,7 @@ TODO: write how to setup
   - pure theme
 - LS_COLORS
 - neovim-gtk
+- nixfromnpm
 - nix-direnv
 - kube-score
 - Vim plugins
