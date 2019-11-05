@@ -21,7 +21,7 @@ TODO: write how to setup
 - pulumi (with some resources)
 - telepresence
 - waybar
-- + overlays for all packages
+- overlays for all packages
 
 ### Packages
 
