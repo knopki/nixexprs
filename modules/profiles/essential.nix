@@ -1,17 +1,11 @@
 { config, pkgs, lib, ... }:
 with lib;
 {
+  imports = [ ../nix.nix ../system.nix ];
+
   options = { knopki.profiles.essential.enable = mkEnableOption "Essential profile"; };
 
   config = mkIf config.knopki.profiles.essential.enable {
-    boot.kernel.sysctl = {
-      "kernel.panic_on_oops" = 1;
-      "kernel.panic" = 20;
-      "net.ipv4.ip_nonlocal_bind" = 1;
-      "net.ipv6.ip_nonlocal_bind" = 1;
-      "vm.panic_on_oom" = 1;
-    };
-
     # common packages on all machines (very opionated)
     # merged with `requiredPackages' from
     # https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/config/system-path.nix
@@ -51,9 +45,12 @@ with lib;
       supportedLocales = mkDefault [ "en_US.UTF-8/UTF-8" "ru_RU.UTF-8/UTF-8" ];
     };
 
-    knopki.nix = {
-      enable = mkDefault true;
-      nixPathFreeze = true;
+    knopki = {
+      nix = {
+        enable = mkDefault true;
+        nixPathFreeze = true;
+      };
+      system.enable = mkDefault true;
     };
 
     programs = {
