@@ -11,6 +11,9 @@ TODO: write how to setup
 ### NixOS modules
 
 - nix
+- profiles:
+  - essential
+  - workstation
 
 ### Overlays
 
