@@ -16,6 +16,9 @@ pkgs.mkShell {
     nixpkgs-fmt
     stdenv
 
+    # add-when-needed: manual cachix push
+    # cachix
+
     # add-when-needed: Go packaging
     # dep2nix
     # vgo2nix

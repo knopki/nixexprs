@@ -19,7 +19,6 @@ with lib;
       bat
       bind
       binutils
-      cachix
       file
       gitAndTools.gitFull
       gnupg
