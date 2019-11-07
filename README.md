@@ -14,6 +14,7 @@ TODO: write how to setup
 - profiles:
   - essential
   - workstation
+- system (kernel, oom)
 
 ### Overlays
 
