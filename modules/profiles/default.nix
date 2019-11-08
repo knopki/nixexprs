@@ -1,1 +1,1 @@
-{ ... }: { imports = [ ./essential.nix ]; }
+{ ... }: { imports = [ ./essential.nix ./workstation.nix ]; }
