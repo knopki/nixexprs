@@ -13,14 +13,19 @@ with lib;
       bat
       bind
       binutils
+      fd
       file
       gitAndTools.gitFull
       gnupg
+      hdparm
       htop
       jq
       lm_sensors
       lsof
       neovim
+      ngrep
+      nmap
+      p7zip
       pciutils
       pinentry
       pinentry_ncurses
@@ -51,6 +56,12 @@ with lib;
         nixPathFreeze = mkDefault true;
       };
       system.enable = mkDefault true;
+    };
+
+    networking = {
+      firewall = {
+        rejectPackets = true;
+      };
     };
 
     programs = {
