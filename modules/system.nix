@@ -12,6 +12,7 @@ in
     latestKernel = mkEnableOption "Use latest kernel package";
     makeLinuxFastAgain = mkEnableOption
       "Use kernel params from https://make-linux-fast-again.com/";
+    optimizeForWorkstation = mkEnableOption "Enable workstation optimizations";
   };
 
   config = mkIf cfg.enable (
@@ -67,6 +68,25 @@ in
             "mds=off"
             "mitigations=off"
           ];
+        }
+      )
+
+      #
+      # Optimize for workstation
+      #
+      (
+        mkIf (cfg.optimizeForWorkstation) {
+          knopki.system = {
+            latestKernel = true;
+            makeLinuxFastAgain = true;
+            nonLocalBinds = true;
+            rebootOnPanicOrOOM = true;
+          };
+          boot = {
+            kernel.sysctl = { "fs.inotify.max_user_watches" = 524288; };
+            kernelParams = [ "quiet" "splash" "nohz_full=1-7" ];
+            tmpOnTmpfs = true;
+          };
         }
       )
     ]

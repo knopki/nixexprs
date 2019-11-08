@@ -48,7 +48,7 @@ with lib;
     knopki = {
       nix = {
         enable = mkDefault true;
-        nixPathFreeze = true;
+        nixPathFreeze = mkDefault true;
       };
       system.enable = mkDefault true;
     };
