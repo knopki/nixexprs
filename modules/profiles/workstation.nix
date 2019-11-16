@@ -13,6 +13,8 @@ with lib;
       system.optimizeForWorkstation = mkDefault true;
     };
 
+    boot.supportedFilesystems = [ "ntfs" ];
+
     environment.gnome3.excludePackages = with pkgs.gnome3; [
       epiphany
       geary
