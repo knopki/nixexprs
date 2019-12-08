@@ -31,10 +31,10 @@
         "homepage": "",
         "owner": "rafaelrinaldi",
         "repo": "pure",
-        "rev": "469cb0ec1b952ac985b3d6b1a564cac05e1059a3",
-        "sha256": "03j60p5xgs3icg8wkrzybvvzyzhpx21xazcwl9p3avdilzkhgnh3",
+        "rev": "101f6f7287b8c0f6fe515e1195532a50d91c7428",
+        "sha256": "0i078m4gfm4i5i8bnap9z8fgd4gnnpbd3k4pgm82sz94ca2kvj9s",
         "type": "tarball",
-        "url": "https://github.com/rafaelrinaldi/pure/archive/469cb0ec1b952ac985b3d6b1a564cac05e1059a3.tar.gz",
+        "url": "https://github.com/rafaelrinaldi/pure/archive/101f6f7287b8c0f6fe515e1195532a50d91c7428.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "version": "v2.3.0"
     },
