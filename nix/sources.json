@@ -254,10 +254,10 @@
         "homepage": "http://www.vim.org/scripts/script.php?script_id=4171",
         "owner": "AndrewRadev",
         "repo": "sideways.vim",
-        "rev": "1265cf654f91fb1536cdaf72ebe5360ba9b902db",
-        "sha256": "1g91jgkfqkjrw4n2jyqfjzvs1gydk24p55j5l9l46p2g5q6ch1mj",
+        "rev": "e9de0bf7cc5f40ba507f0fddda613189f8d072eb",
+        "sha256": "0zcs6w1rfg6i5rpxfpzpdgq1z18wax7sd7ij01psgzvq5h1zn56x",
         "type": "tarball",
-        "url": "https://github.com/AndrewRadev/sideways.vim/archive/1265cf654f91fb1536cdaf72ebe5360ba9b902db.tar.gz",
+        "url": "https://github.com/AndrewRadev/sideways.vim/archive/e9de0bf7cc5f40ba507f0fddda613189f8d072eb.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "version": "v0.3.0"
     },
