@@ -262,10 +262,10 @@
         "version": "v0.3.0"
     },
     "winbox-bin": {
-        "sha256": "0npfz8ijkchwcpfhkfvgfgynhq46fyi3wzm39jp2s6jc2sbffk29",
+        "sha256": "1n2fxdqyslw5l19yajxfmvyacbm7jcc5z2qy4g110ir86mw3kpf2",
         "type": "file",
-        "url": "https://download.mikrotik.com/routeros/winbox/3.19/winbox.exe",
+        "url": "https://download.mikrotik.com/routeros/winbox/3.20/winbox.exe",
         "url_template": "https://download.mikrotik.com/routeros/winbox/<version>/winbox.exe",
-        "version": "3.19"
+        "version": "3.20"
     }
 }
