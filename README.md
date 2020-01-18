@@ -18,9 +18,6 @@ TODO: write how to setup
 
 ### Overlays
 
-- morph
-- niv
-- nixpkgs-fmt
 - nix-direnv
 - pulumi (with some resources)
 - telepresence
