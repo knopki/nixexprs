@@ -1,9 +1,16 @@
-{ pkgs ? import <nixpkgs> {}, sources ? import ./nix/sources.nix }:
-with pkgs.lib;
+{ sources ? import ./nix/sources.nix }:
 let
+  unstable = import sources.nixpkgs-unstable {};
+  pkgs = import sources.nixpkgs {
+    overlays = [
+      (
+        self: super: {
+          nixpkgs-fmt = unstable.nixpkgs-fmt;
+        }
+      )
+    ];
+  };
   overlays = (import ./overlays).allOverlays pkgs pkgs;
-  niv = overlays.niv;
-  nixpkgs-fmt = overlays.nixpkgs-fmt;
   myPkgs = pkgs.callPackage ./pkgs { inherit sources; };
   nixfromnpm = myPkgs.nixfromnpm;
 in
@@ -12,7 +19,7 @@ pkgs.mkShell {
     # essential
     direnv
     gitAndTools.pre-commit
-    niv
+    haskellPackages.niv
     nixpkgs-fmt
     stdenv
 
