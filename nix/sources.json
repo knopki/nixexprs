@@ -5,10 +5,10 @@
         "homepage": "https://github.com/trapd00r/LS_COLORS",
         "owner": "trapd00r",
         "repo": "LS_COLORS",
-        "rev": "332d7a18696057e21f5acd9bb885acffbe798bd4",
-        "sha256": "08mga3jg1f3zsspx0hlgywlabwq07qp5qk1lgjz8rawj62zmqqrf",
+        "rev": "745b57d838dd2ffa9c6001d0f73df4303a3d957f",
+        "sha256": "1q4byr56d3ngjq8il1vhgjma550yxkv1vv1cg2byclxnpig0hg79",
         "type": "tarball",
-        "url": "https://github.com/trapd00r/LS_COLORS/archive/332d7a18696057e21f5acd9bb885acffbe798bd4.tar.gz",
+        "url": "https://github.com/trapd00r/LS_COLORS/archive/745b57d838dd2ffa9c6001d0f73df4303a3d957f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "version": "332d7a18696057e21f5acd9bb885acffbe798bd4"
     },
@@ -31,12 +31,12 @@
         "homepage": "",
         "owner": "rafaelrinaldi",
         "repo": "pure",
-        "rev": "101f6f7287b8c0f6fe515e1195532a50d91c7428",
-        "sha256": "0i078m4gfm4i5i8bnap9z8fgd4gnnpbd3k4pgm82sz94ca2kvj9s",
+        "rev": "d66aa7f0fec5555144d29faec34a4e7eff7af32b",
+        "sha256": "0klcwlgsn6nr711syshrdqgjy8yd3m9kxakfzv94jvcnayl0h62w",
         "type": "tarball",
-        "url": "https://github.com/rafaelrinaldi/pure/archive/101f6f7287b8c0f6fe515e1195532a50d91c7428.tar.gz",
+        "url": "https://github.com/rafaelrinaldi/pure/archive/d66aa7f0fec5555144d29faec34a4e7eff7af32b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
-        "version": "v2.3.0"
+        "version": "v2.5.2"
     },
     "kube-score": {
         "branch": "master",
