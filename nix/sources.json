@@ -109,10 +109,10 @@
         "homepage": "https://github.com/NixOS/nixpkgs",
         "owner": "NixOS",
         "repo": "nixpkgs-channels",
-        "rev": "d1265562b4c3cca8922f680ee504fa6bd875cae6",
-        "sha256": "0qdyiasjdzamlr7jf311wslsvz2cy15cnn8gjj4dr7pwb0wdysp2",
+        "rev": "e6391b4389e10a52358bd94b3031238648818b0a",
+        "sha256": "07nkaihks0k60krghd900x8zhfrsxmvdchlf5fzqmhgmfw5x6krv",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/d1265562b4c3cca8922f680ee504fa6bd875cae6.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/e6391b4389e10a52358bd94b3031238648818b0a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs-unstable": {
@@ -121,10 +121,10 @@
         "homepage": "https://github.com/NixOS/nixpkgs",
         "owner": "NixOS",
         "repo": "nixpkgs-channels",
-        "rev": "c438ce12a858f24c1a2479213eaab751da45fa50",
-        "sha256": "18m4hxx8y0gfrmhkz29iyc0hmss584m9xhgpk7j7bwjaci0fps4z",
+        "rev": "05626cc86b8a8bbadae7753d2e33661400ff67de",
+        "sha256": "1lx5hs2yzg21pc8fv982kdqhc5j5kxi08h8wn3plx848bcnd8jj6",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/c438ce12a858f24c1a2479213eaab751da45fa50.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/05626cc86b8a8bbadae7753d2e33661400ff67de.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "pulumi-resource-gcp-x86_64-darwin": {
