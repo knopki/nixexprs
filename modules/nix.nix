@@ -9,6 +9,22 @@ let
   };
   rebuild-throw = pkgs.writeText "rebuild-throw.nix"
     ''throw "I'm sorry Dave, I'm afraid I can't do that... Please specify NIX_PATH with nixos-config."'';
+
+  # bake "channel" from nixpkgs
+  nixpkgsStableChannelSources = pkgs.runCommand "nixos-${config.system.nixos.version}"
+    { preferLocalBuild = true; }
+    ''
+      mkdir -p $out
+      cp -prd ${(lib.cleanSource pkgs.path).outPath} $out/nixos
+      chmod -R u+w $out/nixos
+      if [ ! -e $out/nixos/nixpkgs ]; then
+        ln -s . $out/nixos/nixpkgs
+      fi
+      echo -n ${config.system.nixos.revision} > $out/nixos/.git-revision
+      echo -n ${config.system.nixos.versionSuffix} > $out/nixos/.version-suffix
+      echo ${config.system.nixos.versionSuffix} | sed -e s/pre// > $out/nixos/svn-revision
+    '';
+  nixpkgsStableEtcPath = "nixos/nixpkgs-stable-channel";
 in
 {
   options.knopki.nix = {
@@ -99,10 +115,9 @@ in
       (
         mkIf (cfg.nixPathFreeze) {
           environment.etc."nixos/configuration.nix".source = rebuild-throw;
+          environment.etc."${nixpkgsStableEtcPath}".source = "${nixpkgsStableChannelSources}/nixos";
           nix.nixPath = [
-            "${pkgs.path}"
-            "nixpkgs=${pkgs.path}"
-            "nixos-config=${rebuild-throw}"
+            "/etc/static/${nixpkgsStableEtcPath}"
           ];
         }
       )
