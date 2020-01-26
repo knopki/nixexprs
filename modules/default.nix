@@ -3,5 +3,6 @@
   docker = ./docker.nix;
   nix = ./nix.nix;
   profiles = ./profiles;
+  services = import ./services;
   system = ./system.nix;
 }
