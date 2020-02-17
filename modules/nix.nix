@@ -117,7 +117,7 @@ in
           environment.etc."nixos/configuration.nix".source = rebuild-throw;
           environment.etc."${nixpkgsStableEtcPath}".source = "${nixpkgsStableChannelSources}/nixos";
           nix.nixPath = [
-            "/etc/static/${nixpkgsStableEtcPath}"
+            "nixpkgs=/etc/static/${nixpkgsStableEtcPath}"
           ];
         }
       )
