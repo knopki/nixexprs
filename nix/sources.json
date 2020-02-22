@@ -67,6 +67,7 @@
     "neovim-gtk": {
         "branch": "master",
         "cargoSha256": "0js581whb6bg65bby2zyssxxrxjcgk925mgv1ds5djdj3bin42ig",
+        "cargoSha256_unstable": "1gsnr2j68kfx2w2r2pv11rln0qlmgq05van2f3h0f7jk5c7rs4yb",
         "description": "gtk ui for neovim",
         "homepage": "https://github.com/daa84/neovim-gtk",
         "owner": "daa84",
