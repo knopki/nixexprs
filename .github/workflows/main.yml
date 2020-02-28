@@ -16,13 +16,13 @@ jobs:
           - "https://nixos.org/channels/nixos-unstable"
     steps:
       - uses: actions/checkout@v1
-      - uses: cachix/install-nix-action@v3
+      - uses: cachix/install-nix-action@v6
       - run: nix-channel --add ${{ matrix.channel }} nixpkgs
       - run: nix-channel --update
       - run: nix eval -f default.nix 'lib'
       - run: nix eval -f default.nix 'modules'
       - run: nix eval -f default.nix 'overlays'
-      - uses: cachix/cachix-action@v2
+      - uses: cachix/cachix-action@v3
         with:
           name: knopki-nixexprs
           signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
