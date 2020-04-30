@@ -205,7 +205,7 @@
         "owner": "datawire",
         "repo": "telepresence",
         "rev": "3256869e2c567e96bf9a19a0b9e44ab82e8453df",
-        "sha256": "1bq0j60h75r9pgs4pfkjlfd4dc7cdr3lai4r94bncr103w633wfp",
+        "sha256": "06klcg4fz6bkxhanvm4m32b6pjs0bjpa3sdhkm9hk515fi2nrm0v",
         "type": "tarball",
         "url": "https://github.com/datawire/telepresence/archive/3256869e2c567e96bf9a19a0b9e44ab82e8453df.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
