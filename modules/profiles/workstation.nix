@@ -49,8 +49,7 @@ with lib; {
       enableFontDir = true;
       fonts = with pkgs; [
         emojione
-        nerdfonts.override
-        { fonts = [ "FiraCode" ]; }
+        (nerdfonts.override { fonts = [ "FiraCode" ]; })
         fira-code-symbols
         font-awesome_4
         noto-fonts
