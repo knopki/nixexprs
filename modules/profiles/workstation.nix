@@ -1,9 +1,10 @@
 { config, pkgs, lib, ... }:
-with lib;
-{
+with lib; {
   imports = [ ../docker.nix ./essential.nix ];
 
-  options = { knopki.profiles.workstation.enable = mkEnableOption "Workstation profile"; };
+  options = {
+    knopki.profiles.workstation.enable = mkEnableOption "Workstation profile";
+  };
 
   config = mkIf config.knopki.profiles.workstation.enable {
     knopki = {
@@ -48,7 +49,9 @@ with lib;
       enableFontDir = true;
       fonts = with pkgs; [
         emojione
-        nur.repos.mic92.fira-code-nerdfonts
+        nerdfonts.override
+        { fonts = [ "FiraCode" ]; }
+        fira-code-symbols
         font-awesome_4
         noto-fonts
       ];
@@ -87,9 +90,7 @@ with lib;
       support32Bit = mkDefault true;
     };
 
-    networking = {
-      networkmanager.enable = true;
-    };
+    networking = { networkmanager.enable = true; };
 
     programs = {
       adb.enable = true;
@@ -98,12 +99,7 @@ with lib;
       ssh.startAgent = true;
       sway = {
         enable = true;
-        extraPackages = with pkgs; [
-          swaybg
-          swayidle
-          swaylock
-          xwayland
-        ];
+        extraPackages = with pkgs; [ swaybg swayidle swaylock xwayland ];
         extraSessionCommands = ''
           export SDL_VIDEODRIVER=wayland
           export XDG_SESSION_TYPE=wayland
