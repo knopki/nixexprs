@@ -1,15 +1,6 @@
 { sources ? import ./nix/sources.nix }:
 let
-  unstable = import sources.nixpkgs-unstable {};
-  pkgs = import sources.nixpkgs {
-    overlays = [
-      (
-        self: super: {
-          nixpkgs-fmt = unstable.nixpkgs-fmt;
-        }
-      )
-    ];
-  };
+  pkgs = import sources.nixpkgs {};
   overlays = (import ./overlays).allOverlays pkgs pkgs;
   myPkgs = pkgs.callPackage ./pkgs { inherit sources; };
   nixfromnpm = myPkgs.nixfromnpm;
