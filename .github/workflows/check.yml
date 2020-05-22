@@ -21,7 +21,7 @@ jobs:
     strategy:
       matrix:
         channel:
-          - "https://nixos.org/channels/nixos-19.09"
+          - "https://nixos.org/channels/nixos-20.03"
           - "https://nixos.org/channels/nixos-unstable"
     steps:
       - uses: actions/checkout@v1
