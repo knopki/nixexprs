@@ -11,6 +11,7 @@ let
     ''throw "I'm sorry Dave, I'm afraid I can't do that... Please specify NIX_PATH with nixos-config."'';
 
   # bake "channel" from nixpkgs
+  nixpkgsStableChannelRevision = if config.system.nixos.revision == null then "master" else config.system.nixos.revision;
   nixpkgsStableChannelSources = pkgs.runCommand "nixos-${config.system.nixos.version}"
     { preferLocalBuild = true; }
     ''
@@ -20,7 +21,7 @@ let
       if [ ! -e $out/nixos/nixpkgs ]; then
         ln -s . $out/nixos/nixpkgs
       fi
-      echo -n ${config.system.nixos.revision} > $out/nixos/.git-revision
+      echo -n ${nixpkgsStableChannelRevision} > $out/nixos/.git-revision
       echo -n ${config.system.nixos.versionSuffix} > $out/nixos/.version-suffix
       echo ${config.system.nixos.versionSuffix} | sed -e s/pre// > $out/nixos/svn-revision
     '';

@@ -38,7 +38,7 @@ with lib; {
       borgbackup
       gnome3.dconf-editor
       pavucontrol
-      pinentry_gnome
+      pinentry-gnome
       powertop
       qt5.qtwayland
       qt5ct
@@ -94,11 +94,16 @@ with lib; {
     programs = {
       adb.enable = true;
       dconf.enable = true;
+      gnupg.agent = {
+        enable = true;
+        pinentryFlavor = "gnome3";
+      };
       light.enable = true;
       ssh.startAgent = true;
       sway = {
         enable = true;
-        extraPackages = with pkgs; [ swaybg swayidle swaylock xwayland ];
+        extraOptions = [ "--my-next-gpu-wont-be-nvidia" ];
+        extraPackages = with pkgs; [ swaybg swayidle swaylock alacritty xwayland wdisplays ];
         extraSessionCommands = ''
           export SDL_VIDEODRIVER=wayland
           export XDG_SESSION_TYPE=wayland
@@ -111,6 +116,7 @@ with lib; {
           export _JAVA_AWT_WM_NONREPARENTING=1
           export SSH_ASKPASS=${pkgs.gnome3.seahorse}/libexec/seahorse/ssh-askpass
         '';
+        wrapperFeatures.gtk = true;
       };
     };
 
@@ -142,8 +148,12 @@ with lib; {
       };
       trezord.enable = true;
       xserver = {
+        enable = true;
         desktopManager.gnome3.enable = true;
-        displayManager.extraSessionFilePackages = [ pkgs.sway ];
+        displayManager.gdm = {
+          enable = true;
+          #wayland = false;
+        };
       };
     };
 

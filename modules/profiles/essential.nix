@@ -6,6 +6,11 @@ with lib;
   options = { knopki.profiles.essential.enable = mkEnableOption "Essential profile"; };
 
   config = mkIf config.knopki.profiles.essential.enable {
+    console = {
+      font = mkDefault "latarcyrheb-sun16";
+      keyMap = mkDefault "us";
+    };
+
     # common packages on all machines (very opionated)
     # merged with `requiredPackages' from
     # https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/config/system-path.nix
@@ -28,7 +33,7 @@ with lib;
       p7zip
       pciutils
       pinentry
-      pinentry_ncurses
+      pinentry-curses
       pstree
       python3 # required by ansible (remove?)
       ranger
@@ -44,8 +49,6 @@ with lib;
     hardware.enableRedistributableFirmware = mkDefault true;
 
     i18n = {
-      consoleFont = mkDefault "latarcyrheb-sun16";
-      consoleKeyMap = mkDefault "us";
       defaultLocale = mkDefault "en_US.UTF-8";
       supportedLocales = mkDefault [ "en_US.UTF-8/UTF-8" "ru_RU.UTF-8/UTF-8" ];
     };
