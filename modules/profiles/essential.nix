@@ -32,8 +32,6 @@ with lib;
       nmap
       p7zip
       pciutils
-      pinentry
-      pinentry-curses
       pstree
       python3 # required by ansible (remove?)
       ranger

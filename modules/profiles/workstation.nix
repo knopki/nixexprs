@@ -16,6 +16,10 @@ with lib; {
 
     boot.supportedFilesystems = [ "ntfs" ];
 
+    environment.sessionVariables = {
+      XDF_CURRENT_DESKTOP = mkIf (config.services.xserver.desktopManager.gnome3.enable || config.programs.sway.enable) "GNOME:Unity";
+    };
+
     environment.gnome3.excludePackages = with pkgs.gnome3; [
       epiphany
       geary
@@ -96,10 +100,10 @@ with lib; {
       dconf.enable = true;
       gnupg.agent = {
         enable = true;
-        pinentryFlavor = "gnome3";
+        enableSSHSupport = true;
+        pinentryFlavor = mkIf config.services.gnome3.gnome-keyring.enable "gnome3";
       };
       light.enable = true;
-      ssh.startAgent = true;
       sway = {
         enable = true;
         extraOptions = [ "--my-next-gpu-wont-be-nvidia" ];
@@ -114,7 +118,6 @@ with lib; {
           # Fix for some Java AWT applications (e.g. Android Studio),
           # use this if they aren't displayed properly:
           export _JAVA_AWT_WM_NONREPARENTING=1
-          export SSH_ASKPASS=${pkgs.gnome3.seahorse}/libexec/seahorse/ssh-askpass
         '';
         wrapperFeatures.gtk = true;
       };
@@ -133,6 +136,10 @@ with lib; {
         core-os-services.enable = true;
         core-shell.enable = true;
         core-utilities.enable = true;
+        gnome-keyring.enable = true;
+        gnome-online-accounts.enable = true;
+        gnome-remote-desktop.enable = true;
+        gnome-settings-daemon.enable = true;
       };
       locate = {
         enable = true;
